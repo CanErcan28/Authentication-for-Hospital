@@ -1,0 +1,12 @@
+C:\Users\cerca\source\repos\AuthemticatorForHospital\bin\Debug\AuthDB.mdf
+C:\Users\cerca\source\repos\AuthemticatorForHospital\bin\Debug\AuthDB_log.ldf
+C:\Users\cerca\source\repos\AuthemticatorForHospital\bin\Debug\AuthemticatorForHospital.exe.config
+C:\Users\cerca\source\repos\AuthemticatorForHospital\bin\Debug\AuthemticatorForHospital.exe
+C:\Users\cerca\source\repos\AuthemticatorForHospital\bin\Debug\AuthemticatorForHospital.pdb
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.csproj.AssemblyReference.cache
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.Form1.resources
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.Properties.Resources.resources
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.csproj.GenerateResource.cache
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.csproj.CoreCompileInputs.cache
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.exe
+C:\Users\cerca\source\repos\AuthemticatorForHospital\obj\Debug\AuthemticatorForHospital.pdb
