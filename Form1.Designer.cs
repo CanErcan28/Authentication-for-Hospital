@@ -30,7 +30,6 @@ namespace AuthemticatorForHospital
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label lblContactID;
             System.Windows.Forms.Label lblName;
             System.Windows.Forms.Label lblSurname;
@@ -38,22 +37,23 @@ namespace AuthemticatorForHospital
             System.Windows.Forms.Label lblWeight;
             System.Windows.Forms.Label lblHeight;
             System.Windows.Forms.Label lblGender;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this._authDBDataSet = new AuthemticatorForHospital.AuthDBDataSet();
             this._bindContactList = new System.Windows.Forms.BindingSource(this.components);
             this._taContact = new AuthemticatorForHospital.AuthDBDataSetTableAdapters.ContactsTableAdapter();
             this._taContactAdapterManager = new AuthemticatorForHospital.AuthDBDataSetTableAdapters.TableAdapterManager();
             this._bndNavContactList = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.contactsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.txtboxContactID = new System.Windows.Forms.TextBox();
             this.txtboxName = new System.Windows.Forms.TextBox();
@@ -63,6 +63,7 @@ namespace AuthemticatorForHospital
             this.txtboxHeight = new System.Windows.Forms.TextBox();
             this.txtboxGender = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             lblContactID = new System.Windows.Forms.Label();
             lblName = new System.Windows.Forms.Label();
             lblSurname = new System.Windows.Forms.Label();
@@ -75,6 +76,70 @@ namespace AuthemticatorForHospital
             ((System.ComponentModel.ISupportInitialize)(this._bndNavContactList)).BeginInit();
             this._bndNavContactList.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblContactID
+            // 
+            lblContactID.AutoSize = true;
+            lblContactID.Location = new System.Drawing.Point(83, 96);
+            lblContactID.Name = "lblContactID";
+            lblContactID.Size = new System.Drawing.Size(77, 17);
+            lblContactID.TabIndex = 1;
+            lblContactID.Text = "Contact ID:";
+            lblContactID.Click += new System.EventHandler(this.contactIDLabel_Click);
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new System.Drawing.Point(83, 124);
+            lblName.Name = "lblName";
+            lblName.Size = new System.Drawing.Size(49, 17);
+            lblName.TabIndex = 3;
+            lblName.Text = "Name:";
+            // 
+            // lblSurname
+            // 
+            lblSurname.AutoSize = true;
+            lblSurname.Location = new System.Drawing.Point(83, 152);
+            lblSurname.Name = "lblSurname";
+            lblSurname.Size = new System.Drawing.Size(69, 17);
+            lblSurname.TabIndex = 5;
+            lblSurname.Text = "Surname:";
+            // 
+            // lblTelephone
+            // 
+            lblTelephone.AutoSize = true;
+            lblTelephone.Location = new System.Drawing.Point(83, 180);
+            lblTelephone.Name = "lblTelephone";
+            lblTelephone.Size = new System.Drawing.Size(80, 17);
+            lblTelephone.TabIndex = 7;
+            lblTelephone.Text = "Telephone:";
+            // 
+            // lblWeight
+            // 
+            lblWeight.AutoSize = true;
+            lblWeight.Location = new System.Drawing.Point(83, 208);
+            lblWeight.Name = "lblWeight";
+            lblWeight.Size = new System.Drawing.Size(56, 17);
+            lblWeight.TabIndex = 9;
+            lblWeight.Text = "Weight:";
+            // 
+            // lblHeight
+            // 
+            lblHeight.AutoSize = true;
+            lblHeight.Location = new System.Drawing.Point(83, 236);
+            lblHeight.Name = "lblHeight";
+            lblHeight.Size = new System.Drawing.Size(53, 17);
+            lblHeight.TabIndex = 11;
+            lblHeight.Text = "Height:";
+            // 
+            // lblGender
+            // 
+            lblGender.AutoSize = true;
+            lblGender.Location = new System.Drawing.Point(83, 264);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new System.Drawing.Size(60, 17);
+            lblGender.TabIndex = 13;
+            lblGender.Text = "Gender:";
             // 
             // _authDBDataSet
             // 
@@ -128,6 +193,31 @@ namespace AuthemticatorForHospital
             this._bndNavContactList.Text = "bindingNavigator1";
             this._bndNavContactList.RefreshItems += new System.EventHandler(this._bndNavContactList_RefreshItems);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Yeni ekle";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
+            this.bindingNavigatorCountItem.Text = "/ {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Toplam öğe sayısı";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Sil";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -161,16 +251,9 @@ namespace AuthemticatorForHospital
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Geçerli konum";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
-            this.bindingNavigatorCountItem.Text = "/ {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Toplam öğe sayısı";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -193,26 +276,8 @@ namespace AuthemticatorForHospital
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Yeni ekle";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Sil";
             // 
             // contactsBindingNavigatorSaveItem
             // 
@@ -223,16 +288,6 @@ namespace AuthemticatorForHospital
             this.contactsBindingNavigatorSaveItem.Text = "Veriyi Sakla";
             this.contactsBindingNavigatorSaveItem.Click += new System.EventHandler(this.contactsBindingNavigatorSaveItem_Click);
             // 
-            // lblContactID
-            // 
-            lblContactID.AutoSize = true;
-            lblContactID.Location = new System.Drawing.Point(83, 96);
-            lblContactID.Name = "lblContactID";
-            lblContactID.Size = new System.Drawing.Size(77, 17);
-            lblContactID.TabIndex = 1;
-            lblContactID.Text = "Contact ID:";
-            lblContactID.Click += new System.EventHandler(this.contactIDLabel_Click);
-            // 
             // txtboxContactID
             // 
             this.txtboxContactID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._bindContactList, "ContactID", true));
@@ -240,15 +295,6 @@ namespace AuthemticatorForHospital
             this.txtboxContactID.Name = "txtboxContactID";
             this.txtboxContactID.Size = new System.Drawing.Size(100, 22);
             this.txtboxContactID.TabIndex = 2;
-            // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new System.Drawing.Point(83, 124);
-            lblName.Name = "lblName";
-            lblName.Size = new System.Drawing.Size(49, 17);
-            lblName.TabIndex = 3;
-            lblName.Text = "Name:";
             // 
             // txtboxName
             // 
@@ -258,15 +304,6 @@ namespace AuthemticatorForHospital
             this.txtboxName.Size = new System.Drawing.Size(100, 22);
             this.txtboxName.TabIndex = 4;
             // 
-            // lblSurname
-            // 
-            lblSurname.AutoSize = true;
-            lblSurname.Location = new System.Drawing.Point(83, 152);
-            lblSurname.Name = "lblSurname";
-            lblSurname.Size = new System.Drawing.Size(69, 17);
-            lblSurname.TabIndex = 5;
-            lblSurname.Text = "Surname:";
-            // 
             // txtboxSurname
             // 
             this.txtboxSurname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._bindContactList, "Surname", true));
@@ -274,15 +311,6 @@ namespace AuthemticatorForHospital
             this.txtboxSurname.Name = "txtboxSurname";
             this.txtboxSurname.Size = new System.Drawing.Size(100, 22);
             this.txtboxSurname.TabIndex = 6;
-            // 
-            // lblTelephone
-            // 
-            lblTelephone.AutoSize = true;
-            lblTelephone.Location = new System.Drawing.Point(83, 180);
-            lblTelephone.Name = "lblTelephone";
-            lblTelephone.Size = new System.Drawing.Size(80, 17);
-            lblTelephone.TabIndex = 7;
-            lblTelephone.Text = "Telephone:";
             // 
             // txtboxTelephone
             // 
@@ -292,15 +320,6 @@ namespace AuthemticatorForHospital
             this.txtboxTelephone.Size = new System.Drawing.Size(100, 22);
             this.txtboxTelephone.TabIndex = 8;
             // 
-            // lblWeight
-            // 
-            lblWeight.AutoSize = true;
-            lblWeight.Location = new System.Drawing.Point(83, 208);
-            lblWeight.Name = "lblWeight";
-            lblWeight.Size = new System.Drawing.Size(56, 17);
-            lblWeight.TabIndex = 9;
-            lblWeight.Text = "Weight:";
-            // 
             // txtboxWeight
             // 
             this.txtboxWeight.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._bindContactList, "Weight", true));
@@ -309,15 +328,6 @@ namespace AuthemticatorForHospital
             this.txtboxWeight.Size = new System.Drawing.Size(100, 22);
             this.txtboxWeight.TabIndex = 10;
             // 
-            // lblHeight
-            // 
-            lblHeight.AutoSize = true;
-            lblHeight.Location = new System.Drawing.Point(83, 236);
-            lblHeight.Name = "lblHeight";
-            lblHeight.Size = new System.Drawing.Size(53, 17);
-            lblHeight.TabIndex = 11;
-            lblHeight.Text = "Height:";
-            // 
             // txtboxHeight
             // 
             this.txtboxHeight.DataBindings.Add(new System.Windows.Forms.Binding("Text", this._bindContactList, "Height", true));
@@ -325,15 +335,6 @@ namespace AuthemticatorForHospital
             this.txtboxHeight.Name = "txtboxHeight";
             this.txtboxHeight.Size = new System.Drawing.Size(100, 22);
             this.txtboxHeight.TabIndex = 12;
-            // 
-            // lblGender
-            // 
-            lblGender.AutoSize = true;
-            lblGender.Location = new System.Drawing.Point(83, 264);
-            lblGender.Name = "lblGender";
-            lblGender.Size = new System.Drawing.Size(60, 17);
-            lblGender.TabIndex = 13;
-            lblGender.Text = "Gender:";
             // 
             // txtboxGender
             // 
@@ -353,11 +354,22 @@ namespace AuthemticatorForHospital
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(86, 340);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(183, 30);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.onClose);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(lblContactID);
             this.Controls.Add(this.txtboxContactID);
@@ -415,6 +427,7 @@ namespace AuthemticatorForHospital
         private System.Windows.Forms.TextBox txtboxGender;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.BindingSource _bindContactList;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

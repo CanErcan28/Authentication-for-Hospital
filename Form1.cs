@@ -63,5 +63,11 @@ namespace AuthemticatorForHospital
         {
 
         }
+
+        private void onClose(object sender, EventArgs e)
+        {
+            //close the form. since this is the main form of the application the app eill now close ass well.
+            Close();
+        }
     }
 }
